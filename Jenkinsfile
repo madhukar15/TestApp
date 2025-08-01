@@ -11,7 +11,10 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         echo "🛠️ Building Docker image: $IMAGE:$TAG"
-        sh 'docker build -t $IMAGE:$TAG .'
+        sh '''
+          docker build -t $IMAGE:$TAG .
+          docker tag $IMAGE:$TAG $IMAGE:latest
+        '''
       }
     }
 
@@ -25,7 +28,10 @@ pipeline {
     stage('Push to DockerHub') {
       steps {     
             echo "📦 Pushing image to DockerHub: $IMAGE:$TAG"   
-            sh 'docker push $IMAGE:$TAG'
+            sh '''
+          docker push $IMAGE:$TAG
+          docker push $IMAGE:latest
+          '''
          
         }
       }
