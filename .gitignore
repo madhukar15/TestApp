@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependency directories
+.pnpm/
+.bun/
+.yarn/
+.cache/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Env files (if you use them)
+.env
+.env.*
+
+# Docker-related
+*.tar
+docker-compose.override.yml
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+
+# Build artifacts
+dist/
+build/
+
+# Optional: lock files (if you use only one package manager)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
