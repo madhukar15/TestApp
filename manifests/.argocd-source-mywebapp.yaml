@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - madhukar15/hello-world:11
